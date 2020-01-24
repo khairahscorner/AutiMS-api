@@ -33,8 +33,7 @@
   },
   "devDependencies": {},
   "autoload": {
-    "App": "./app",
-    "Custom": "../AutiMS-api/app"
+    "App": "./app"
   },
   "engines": {
     "node": "10.14.0"

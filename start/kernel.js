@@ -2,9 +2,7 @@
 
 /** @type {import('@adonisjs/framework/src/Server')} */
 const Server = use('Server')
-const MiddlewareBase = require('@adonisjs/middleware-base')
 
-const middleware = new MiddlewareBase('handle')
 /*
 |--------------------------------------------------------------------------
 | Global Middleware
@@ -18,6 +16,7 @@ const globalMiddleware = [
   'Adonis/Middleware/BodyParser',
   'App/Middleware/ConvertEmptyStringsToNull'
 ]
+
 /*
 |--------------------------------------------------------------------------
 | Named Middleware
@@ -58,13 +57,8 @@ const serverMiddleware = [
   'Adonis/Middleware/Static',
   'Adonis/Middleware/Cors'
 ]
-middleware.registerGlobal(globalMiddleware)
-middleware.registerNamed(namedMiddleware)
-middleware.use(serverMiddleware)
-// Server
-  
 
-// await middleware
-//   .getGlobalAndNamed([])
-//   .params([ctx])
-//   .run()
+Server
+  .registerGlobal(globalMiddleware)
+  .registerNamed(namedMiddleware)
+  .use(serverMiddleware)

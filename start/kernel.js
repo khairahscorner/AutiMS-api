@@ -2,7 +2,9 @@
 
 /** @type {import('@adonisjs/framework/src/Server')} */
 const Server = use('Server')
+const MiddlewareBase = require('@adonisjs/middleware-base')
 
+const middleware = new MiddlewareBase('handle')
 /*
 |--------------------------------------------------------------------------
 | Global Middleware
@@ -14,9 +16,8 @@ const Server = use('Server')
 */
 const globalMiddleware = [
   'Adonis/Middleware/BodyParser',
-  '../app/Middleware/ConvertEmptyStringsToNull'
+  'App/Middleware/ConvertEmptyStringsToNull'
 ]
-
 /*
 |--------------------------------------------------------------------------
 | Named Middleware
@@ -37,10 +38,10 @@ const globalMiddleware = [
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
-  isParent: '../app/Middleware/isParent',
-  isCaregiver: '../app/Middleware/isCaregiver',
-  isTherapist: '../app/Middleware/isTherapist',
-  isParentOrCaregiver: '../app/Middleware/isParentOrCaregiver'
+  isParent: 'App/Middleware/isParent',
+  isCaregiver: 'App/Middleware/isCaregiver',
+  isTherapist: 'App/Middleware/isTherapist',
+  isParentOrCaregiver: 'App/Middleware/isParentOrCaregiver'
 }
 
 /*
@@ -57,8 +58,13 @@ const serverMiddleware = [
   'Adonis/Middleware/Static',
   'Adonis/Middleware/Cors'
 ]
+middleware.registerGlobal(globalMiddleware)
+middleware.registerNamed(namedMiddleware)
+middleware.use(serverMiddleware)
+// Server
+  
 
-Server
-  .registerGlobal(globalMiddleware)
-  .registerNamed(namedMiddleware)
-  .use(serverMiddleware)
+// await middleware
+//   .getGlobalAndNamed([])
+//   .params([ctx])
+//   .run()

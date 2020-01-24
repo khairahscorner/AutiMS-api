@@ -25,6 +25,7 @@
     "@adonisjs/ignitor": "^2.0.8",
     "@adonisjs/lucid": "^6.1.3",
     "@adonisjs/mail": "^3.0.10",
+    "@adonisjs/middleware-base": "^1.0.0",
     "@adonisjs/validator": "^5.0.6",
     "mysql": "^2.17.1",
     "randomstring": "^1.1.5",
@@ -32,7 +33,8 @@
   },
   "devDependencies": {},
   "autoload": {
-    "App": "./app"
+    "App": "./app",
+    "Custom": "../AutiMS-api/app"
   },
   "engines": {
     "node": "10.14.0"

@@ -16,7 +16,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: "https://autims.netlify.com/",
+  origin: ['https://autims.netlify.com/', 'http://localhost:8080'],
 
   /*
   |--------------------------------------------------------------------------

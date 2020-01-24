@@ -14,7 +14,7 @@ const Server = use('Server')
 */
 const globalMiddleware = [
   'Adonis/Middleware/BodyParser',
-  'App/Middleware/ConvertEmptyStringsToNull'
+  '../app/Middleware/ConvertEmptyStringsToNull'
 ]
 
 /*
@@ -37,10 +37,10 @@ const globalMiddleware = [
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
-  isParent: 'App/Middleware/isParent',
-  isCaregiver: 'App/Middleware/isCaregiver',
-  isTherapist: 'App/Middleware/isTherapist',
-  isParentOrCaregiver: 'App/Middleware/isParentOrCaregiver'
+  isParent: '../app/Middleware/isParent',
+  isCaregiver: '../app/Middleware/isCaregiver',
+  isTherapist: '../app/Middleware/isTherapist',
+  isParentOrCaregiver: '../app/Middleware/isParentOrCaregiver'
 }
 
 /*
@@ -54,7 +54,7 @@ const namedMiddleware = {
 |
 */
 const serverMiddleware = [
-  // 'Adonis/Middleware/Static',
+  'Adonis/Middleware/Static',
   'Adonis/Middleware/Cors'
 ]
 

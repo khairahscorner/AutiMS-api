@@ -9,8 +9,8 @@ class CaregiverSchema extends Schema {
       table.increments()
       table.integer('parent_id').notNullable().unsigned().references('id').inTable('parents')
       // added these 
-      table.string('parent_name').notNullable().references('name').inTable('parents')
-      table.string('parent_email').notNullable().references('email').inTable('parents')
+      table.string('parent_name')
+      table.string('parent_email')
       // end of addition
       table.string('name', 254).notNullable()
       table.string('email', 254).notNullable().unique().notNullable().references('email').inTable('users')

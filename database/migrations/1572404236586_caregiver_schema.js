@@ -8,7 +8,7 @@ class CaregiverSchema extends Schema {
     this.create('caregivers', (table) => {
       table.increments()
       table.integer('parent_id').notNullable().unsigned().references('id').inTable('parents')
-      // added these 
+      // added these
       table.string('parent_name')
       table.string('parent_email')
       // end of addition

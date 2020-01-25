@@ -22,35 +22,20 @@ const globalMiddleware = [
 | Named Middleware
 |--------------------------------------------------------------------------
 |
-| Named middleware is key/value object to conditionally add middleware on
-| specific routes or group of routes.
-|
-| // define
-| {
-|   auth: 'Adonis/Middleware/Auth'
-| }
-|
-| // use
-| Route.get().middleware('auth')
-|
 */
 const namedMiddleware = {
   auth: 'Adonis/Middleware/Auth',
   guest: 'Adonis/Middleware/AllowGuestOnly',
-  isParent: 'App/Middleware/isParent',
-  isCaregiver: 'App/Middleware/isCaregiver',
-  isTherapist: 'App/Middleware/isTherapist',
-  isParentOrCaregiver: 'App/Middleware/isParentOrCaregiver'
+  isParent: 'App/Middleware/IsParent',
+  isCaregiver: 'App/Middleware/IsCaregiver',
+  isTherapist: 'App/Middleware/IsTherapist',
+  isParentOrCaregiver: 'App/Middleware/IsParentOrCaregiver'
 }
 
 /*
 |--------------------------------------------------------------------------
 | Server Middleware
 |--------------------------------------------------------------------------
-|
-| Server level middleware are executed even when route for a given URL is
-| not registered. Features like `static assets` and `cors` needs better
-| control over request lifecycle.
 |
 */
 const serverMiddleware = [

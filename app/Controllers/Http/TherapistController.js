@@ -121,8 +121,7 @@ class TherapistController {
       if (!checkLoginUser) {
         return response.status(400).json({
           status: "Failed",
-          message: "Invalid Credentials",
-          details: "User does not exist"
+          message: "Invalid Credentials, User does not exist."
         });
       }
       const verifyPassword = await Hash.verify(

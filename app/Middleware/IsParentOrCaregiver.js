@@ -20,12 +20,14 @@ class IsParentOrCaregiver {
       const checkAuthUserType = await User.query().where('id', authUser.id).with('parent').with('caregiver').first()
       if ((checkAuthUserType.user_type == 'parent') || (checkAuthUserType.user_type == 'caregiver') ) {
         if(checkAuthUserType.user_type == 'caregiver' ){
-          if (checkAuthUserType.caregiver.confirmation_token = null) {
+          if (checkAuthUserType.caregiver.confirmation_token == null) {
+            console.log('no token')
             return await next()
-          } else {
+          } 
+          else {
             return response.status(401).json({
               status: 'Failed',
-              message: 'UnAuthorized access'
+              message: 'Unauthorized access'
             })
           }
         }

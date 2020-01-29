@@ -34,7 +34,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to add activity',
                 error: error
             })
         }   
@@ -68,7 +68,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to delete',
                 error: error
             })
         }   
@@ -101,7 +101,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to add activity',
                 error: error
             })
         }   
@@ -135,7 +135,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to delete',
                 error: error
             })
         }   
@@ -168,7 +168,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to add activity',
                 error: error
             })
         }   
@@ -202,7 +202,7 @@ class ActivityReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to delete',
                 error: error
             })
         }   

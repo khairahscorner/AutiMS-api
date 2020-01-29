@@ -21,7 +21,6 @@ class IsParentOrCaregiver {
       if ((checkAuthUserType.user_type == 'parent') || (checkAuthUserType.user_type == 'caregiver') ) {
         if(checkAuthUserType.user_type == 'caregiver' ){
           if (checkAuthUserType.caregiver.confirmation_token == null) {
-            console.log('no token')
             return await next()
           } 
           else {

@@ -48,7 +48,7 @@ class MonthlyReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to create report',
                 error: error
             })
         }   
@@ -68,7 +68,7 @@ class MonthlyReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to get reports',
                 error: error
             })
         }  
@@ -88,7 +88,7 @@ class MonthlyReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to get report',
                 error: error
             })
         }  
@@ -146,7 +146,7 @@ class MonthlyReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to save report',
                 error: error
             })
         }   
@@ -180,7 +180,7 @@ class MonthlyReportController {
             console.log(error)
             return response.status(500).json({
                 status: 'Failed',
-                message: 'Failed Internal server error',
+                message: 'Failed to delete',
                 error: error
             })
         }   

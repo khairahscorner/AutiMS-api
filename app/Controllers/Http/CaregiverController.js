@@ -46,7 +46,7 @@ class CaregiverController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to activate",
         error: error
       });
     }
@@ -68,7 +68,7 @@ class CaregiverController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get profile",
         error: error
       });
     }
@@ -112,7 +112,7 @@ class CaregiverController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to save profile",
         error: error
       });
     }
@@ -134,7 +134,7 @@ class CaregiverController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed",
         error: error
       });
     }

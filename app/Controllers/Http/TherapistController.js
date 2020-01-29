@@ -78,7 +78,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to register account",
         error: error
       });
     }
@@ -147,7 +147,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to log in",
         error: error
       });
     }
@@ -171,7 +171,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get profile",
         error: error
       });
     }
@@ -198,7 +198,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed",
         error: error
       });
     }
@@ -258,7 +258,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to save profile",
         error: error
       });
     }
@@ -333,7 +333,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to add new patient",
         error: error
       });
     }
@@ -363,7 +363,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get patient profile",
         error: error
       });
     }
@@ -393,7 +393,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get patients",
         error: error
       });
     }
@@ -473,7 +473,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to save patient profile",
         error: error
       });
     }
@@ -514,7 +514,7 @@ class TherapistController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to delete patient",
         error: error
       });
     }

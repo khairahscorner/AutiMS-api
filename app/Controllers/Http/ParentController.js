@@ -65,7 +65,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to create account",
         error: error
       });
     }
@@ -114,7 +114,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get profile",
         error: error
       });
     }
@@ -176,7 +176,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to save profile",
         error: error
       });
     }
@@ -252,7 +252,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to create caregiver account",
         error: error
       });
     }
@@ -276,7 +276,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get therapists",
         error: error
       });
     }
@@ -310,7 +310,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to verify relationship",
         error: error
       });
     }
@@ -333,7 +333,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed to get caregivers",
         error: error
       });
     }
@@ -356,7 +356,7 @@ class ParentController {
       console.log(error);
       return response.status(500).json({
         status: "Failed",
-        message: "Failed Internal server error",
+        message: "Failed",
         error: error
       });
     }
